@@ -8,3 +8,6 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/WAAVR.unity
     guid: 2f79c508b415768429dcf99532a55dde
+  - enabled: 0
+    path: Assets/Samples/HelloVR/Scenes/HelloVR.unity
+    guid: 0f74396baa8c08b45999d234222160cb
