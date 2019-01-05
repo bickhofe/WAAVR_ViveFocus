@@ -145,7 +145,7 @@ public class GameManager : MonoBehaviour
             if (SmartBomb) if (!SmartBombText.activeSelf) SmartBombText.SetActive(true);
 
             // button pressed
-            if (WaveVR_Controller.Input(device).GetPress(WVR_InputId.WVR_InputId_Alias1_Touchpad))
+            if (WaveVR_Controller.Input(device).GetPress(WVR_InputId.WVR_InputId_Alias1_Trigger))
             {
                 LoadSmartBomb();
             }
