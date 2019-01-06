@@ -19533,7 +19533,6 @@ MonoBehaviour:
   gameStart: {fileID: 8300000, guid: f21d455d0d9a569438c5d31e8546dbcd, type: 3}
   gameOver: {fileID: 8300000, guid: ca69c50d2c92f3a4691d3e12af259559, type: 3}
   smartBomb: {fileID: 8300000, guid: b9fd334f6a65f1b47a72ce5e2061d9e9, type: 3}
-  timer: {fileID: 8300000, guid: b90983722a48cc041a1de4320276b7ee, type: 3}
   empty: {fileID: 8300000, guid: 3d2482d84b707a84dbcdf0317a3a2698, type: 3}
   yeehaa: {fileID: 8300000, guid: 527a2e7f733ba364e9077e4f26e9e31c, type: 3}
   Startup:
@@ -20813,7 +20812,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1774323179}
-        m_MethodName: LaunchVrHome
+        m_MethodName: QuitGame
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
