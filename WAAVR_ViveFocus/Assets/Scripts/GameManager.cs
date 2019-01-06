@@ -3,10 +3,13 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using wvr;
+using WaveVR_Log;
 //using HTC.UnityPlugin.Vive;
 
 public class GameManager : MonoBehaviour
 {
+    // public GameObject TestCube;
+    // public Text DebugText;
 
     public Transform VRCam;
     //public bool dof6 = true;  
@@ -68,6 +71,7 @@ public class GameManager : MonoBehaviour
     public SoundFX SoundScript;
 
     //Vive Focus
+    private static string LOG_TAG = "ControllerTest";
     public WVR_DeviceType device = WVR_DeviceType.WVR_DeviceType_HMD;
 
     WVR_InputId[] buttonIds = new WVR_InputId[] {
@@ -83,6 +87,11 @@ public class GameManager : MonoBehaviour
         WVR_InputId.WVR_InputId_Alias1_Trigger,
         WVR_InputId.WVR_InputId_Alias1_Digital_Trigger,
         WVR_InputId.WVR_InputId_Alias1_System
+    };
+
+    WVR_InputId[] axisIds = new WVR_InputId[] {
+        WVR_InputId.WVR_InputId_Alias1_Touchpad,
+        WVR_InputId.WVR_InputId_Alias1_Trigger
     };
 
     // Use this for initialization
@@ -143,15 +152,39 @@ public class GameManager : MonoBehaviour
 
             //show Smartbomb info
             if (SmartBomb) if (!SmartBombText.activeSelf) SmartBombText.SetActive(true);
-
+            
             // button pressed
-            if (WaveVR_Controller.Input(device).GetPress(WVR_InputId.WVR_InputId_Alias1_Trigger))
+            for (uint i = 0; i < 2; i++)
             {
-                LoadSmartBomb();
-            }
-            else
-            {
-                StopLoadingSmartBomb();
+                foreach (WVR_InputId buttonId in buttonIds)
+                {
+                    // button down
+                    // if (WaveVR_Controller.Input (device).GetPressDown (buttonId))
+                    // {
+                    //     TestCube.SetActive(false);
+                    //     DebugText.text = "xx "+device;
+                    //     WaveVR_Controller.Input (device).TriggerHapticPulse ();
+                    //     LoadSmartBomb();
+                    // }
+
+                    // button up
+                    if (WaveVR_Controller.Input (device).GetPressUp (buttonId))
+                    {
+                        
+                        if (buttonId == WVR_InputId.WVR_InputId_Alias1_Touchpad) StopLoadingSmartBomb();
+
+                        // if (buttonId == WVR_InputId.WVR_InputId_Alias1_Trigger)
+                        // {
+                        //     WaveVR_Controller.Input (device).TriggerHapticPulse ();
+                        // }
+                    }
+
+                    // button pressed
+                    if (WaveVR_Controller.Input (device).GetPress (buttonId))
+                    {
+                        if (buttonId == WVR_InputId.WVR_InputId_Alias1_Touchpad) LoadSmartBomb();                        
+                    }
+                }
             }
 
             //faster goodies when ammo is low
@@ -200,8 +233,6 @@ public class GameManager : MonoBehaviour
                 print("ende");
             }
 
-            print("time: " + hitTimeCount + " hits: " + hitCount);
-
             // Game over
             if (Energy <= 0)
             {
@@ -216,19 +247,19 @@ public class GameManager : MonoBehaviour
         if (SmartBomb)
         {
             //play sound
-            if (SmartLoad == 0) SoundScript.audioFX.PlayOneShot(SoundScript.timer);
+            if (SmartLoad == 0) SoundScript.audioTimer.Play();
             SmartLoad += Time.deltaTime;
 
-            if (SmartLoad >= 2.5f) FireSmartBomb();
+            if (SmartLoad >= 5f) FireSmartBomb();
         }
     }
 
     public void StopLoadingSmartBomb()
     {
-        if (SmartBomb)
+        if (SmartLoad > 0)
         {
             SmartLoad = 0;
-            SoundScript.audioFX.Stop();
+            SoundScript.audioTimer.Stop();
         }
     }
 
@@ -396,6 +427,9 @@ public class GameManager : MonoBehaviour
 
     public void FireSmartBomb()
     {
+        //controller rumble fx
+        WaveVR_Controller.Input (device).TriggerHapticPulse ();
+
         SmartBombText.SetActive(false);
         SmartBomb = false;
         SmartLoad = 0;

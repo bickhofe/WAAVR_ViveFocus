@@ -6,6 +6,7 @@ public class SoundFX : MonoBehaviour
     public AudioSource audioFX;
     public AudioSource audioLoop;
     public AudioSource audioSpeech;
+    public AudioSource audioTimer;
     public AudioClip activate;
     public AudioClip menuLoop;
     public AudioClip gameLoop;
@@ -19,7 +20,6 @@ public class SoundFX : MonoBehaviour
     public AudioClip gameStart;
     public AudioClip gameOver;
     public AudioClip smartBomb;
-    public AudioClip timer;
     public AudioClip empty;
     public AudioClip yeehaa;
 
