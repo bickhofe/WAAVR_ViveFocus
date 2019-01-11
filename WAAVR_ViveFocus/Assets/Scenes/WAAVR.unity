@@ -2073,6 +2073,76 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 305763386}
   m_Mesh: {fileID: 4300086, guid: c5b5b2829f64e2349b667c04db4a634a, type: 3}
+--- !u!1 &318142589
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 318142593}
+  - component: {fileID: 318142592}
+  - component: {fileID: 318142591}
+  m_Layer: 0
+  m_Name: EventSystem
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &318142591
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 318142589}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d35b04550c2750f4db3db7d6d373e5fe, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  RightController: {fileID: 0}
+  RightRaycastMask:
+    serializedVersion: 2
+    m_Bits: 4294966527
+  LeftController: {fileID: 0}
+  LeftRaycastMask:
+    serializedVersion: 2
+    m_Bits: 4294966527
+  ButtonToTrigger: 17
+  Head: {fileID: 0}
+  RaycastMode: 2
+  RaycastStartPoint: 0
+  CanvasTag: EventCanvas
+  FixedBeamLength: 9
+  mForceModuleActive: 1
+--- !u!114 &318142592
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 318142589}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -619905303, guid: f5f67c52d1564df4a8936ccd202a3bd8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_FirstSelected: {fileID: 0}
+  m_sendNavigationEvents: 1
+  m_DragThreshold: 5
+--- !u!4 &318142593
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 318142589}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 11
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &343794159
 GameObject:
   m_ObjectHideFlags: 0
@@ -12020,7 +12090,7 @@ ParticleSystem:
   moveWithTransform: 0
   moveWithCustomTransform: {fileID: 0}
   scalingMode: 1
-  randomSeed: 1213361638
+  randomSeed: 2100656935
   InitialModule:
     serializedVersion: 3
     enabled: 1
@@ -21623,7 +21693,7 @@ ParticleSystem:
   moveWithTransform: 0
   moveWithCustomTransform: {fileID: 0}
   scalingMode: 2
-  randomSeed: 1663143646
+  randomSeed: -79386966
   InitialModule:
     serializedVersion: 3
     enabled: 1

@@ -161,9 +161,9 @@ PlayerSettings:
   androidSupportedAspectRatio: 1
   androidMaxAspectRatio: 2.1
   applicationIdentifier:
-    Android: com.bickhofe.waavrvivewave
+    Android: com.bickhofe.vivewave
   buildNumber: {}
-  AndroidBundleVersionCode: 3
+  AndroidBundleVersionCode: 5
   AndroidMinSdkVersion: 25
   AndroidTargetSdkVersion: 25
   AndroidPreferredInstallLocation: 1
@@ -246,8 +246,8 @@ PlayerSettings:
   AndroidTargetDevice: 0
   AndroidSplashScreenScale: 0
   androidSplashScreen: {fileID: 0}
-  AndroidKeystoreName: 
-  AndroidKeyaliasName: 
+  AndroidKeystoreName: L:/GoogleDrive/_cert/Universal_keystore/bickhofe.keystore
+  AndroidKeyaliasName: bickhofe
   AndroidTVCompatibility: 1
   AndroidIsGame: 1
   AndroidEnableTango: 0
@@ -280,8 +280,7 @@ PlayerSettings:
     - Oculus
   - m_BuildTarget: Android
     m_Enabled: 0
-    m_Devices:
-    - None
+    m_Devices: []
   m_BuildTargetEnableVuforiaSettings: []
   openGLRequireES31: 0
   openGLRequireES31AEP: 0

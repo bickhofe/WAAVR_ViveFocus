@@ -158,25 +158,13 @@ public class GameManager : MonoBehaviour
             {
                 foreach (WVR_InputId buttonId in buttonIds)
                 {
-                    // button down
+                    // button down (once)
                     // if (WaveVR_Controller.Input (device).GetPressDown (buttonId))
-                    // {
-                    //     TestCube.SetActive(false);
-                    //     DebugText.text = "xx "+device;
-                    //     WaveVR_Controller.Input (device).TriggerHapticPulse ();
-                    //     LoadSmartBomb();
-                    // }
 
                     // button up
                     if (WaveVR_Controller.Input (device).GetPressUp (buttonId))
-                    {
-                        
+                    { 
                         if (buttonId == WVR_InputId.WVR_InputId_Alias1_Touchpad) StopLoadingSmartBomb();
-
-                        // if (buttonId == WVR_InputId.WVR_InputId_Alias1_Trigger)
-                        // {
-                        //     WaveVR_Controller.Input (device).TriggerHapticPulse ();
-                        // }
                     }
 
                     // button pressed

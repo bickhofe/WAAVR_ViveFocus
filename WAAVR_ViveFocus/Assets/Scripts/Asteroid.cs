@@ -94,7 +94,7 @@ public class Asteroid : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
             //target ring position und ausrichtung auf die vr camera
             Target.transform.LookAt(MainScript.VRCam.transform.position);
 
-            if (Input.GetMouseButtonDown(1)) LockTarget();
+            //if (Input.GetMouseButtonDown(1)) LockTarget();
         }
     }
 
