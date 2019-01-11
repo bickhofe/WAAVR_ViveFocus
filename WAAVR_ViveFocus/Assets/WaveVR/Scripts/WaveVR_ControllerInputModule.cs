@@ -563,6 +563,7 @@ public class WaveVR_ControllerInputModule : BaseInputModule
 
             if (btnPressDown)
                 _eventController.eligibleForButtonClick = true;
+
             // Pointer Click equals to Button.onClick, we sent Pointer Click in OnTriggerUp()
             //if (btnPressUp && _eventController.eligibleForButtonClick)
                 //onButtonClick (_eventController);
