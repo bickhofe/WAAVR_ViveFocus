@@ -45,7 +45,7 @@ RenderSettings:
   m_AmbientSkyColor: {r: 0.9191176, g: 0.9191176, b: 0.9191176, a: 1}
   m_AmbientEquatorColor: {r: 0.114, g: 0.125, b: 0.133, a: 1}
   m_AmbientGroundColor: {r: 0.047, g: 0.043, b: 0.035, a: 1}
-  m_AmbientIntensity: 4
+  m_AmbientIntensity: 1
   m_AmbientMode: 0
   m_SubtractiveShadowColor: {r: 0.42, g: 0.478, b: 0.627, a: 1}
   m_SkyboxMaterial: {fileID: 2100000, guid: 8e85690cf80050f47b91647ab790aa40, type: 2}
@@ -9954,7 +9954,7 @@ Light:
   m_Type: 2
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_Intensity: 1
-  m_Range: 15
+  m_Range: 20
   m_SpotAngle: 30
   m_CookieSize: 10
   m_Shadows:
@@ -12090,7 +12090,7 @@ ParticleSystem:
   moveWithTransform: 0
   moveWithCustomTransform: {fileID: 0}
   scalingMode: 1
-  randomSeed: 2100656935
+  randomSeed: 735829972
   InitialModule:
     serializedVersion: 3
     enabled: 1
@@ -21693,7 +21693,7 @@ ParticleSystem:
   moveWithTransform: 0
   moveWithCustomTransform: {fileID: 0}
   scalingMode: 2
-  randomSeed: -79386966
+  randomSeed: -1222797070
   InitialModule:
     serializedVersion: 3
     enabled: 1
